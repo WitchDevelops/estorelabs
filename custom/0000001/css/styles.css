@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* minimal CSS reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+img,
+picture,
+source {
+    display: block;
+    max-width: 100%;
+}
+
+:root {
+    /* colors */
+    --yellow: #ffc404;
+    /* fonts */
+    --fw-regular: 400;
+    --fw-bold: 700;
+    --fs-h1: 3.33rem;
+    --fs-h2: 2.1rem;
+    --fs-h3: 4.6rem;
+    --fs-p-header: 1.5rem;
+    --fs-p-banner: 1.67rem;
+}
+
+#main-0000001 {
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+}
+
+#main-0000001 h1,
+h2,
+h3 {
+    text-transform: uppercase;
+}
+
+#main-0000001 header {
+    padding: 3rem 2rem;
+}
+
+#main-0000001 h1 {
+    font-weight: var(--fw-regular);
+    font-size: clamp(var(--fs-h2),
+            calc(var(--fs-h2) + 0.1vi),
+            var(--fs-h1));
+}
+
+#main-0000001 header>p {
+    font-size: clamp(1rem,
+            calc(var(--fs-p-header) - 2vi),
+            var(--fs-p-header));
+    margin: 1.5rem 0 3rem 0;
+}
+
+#main-0000001 .img-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+@media screen and (min-width: 600px) {
+    #main-0000001 .img-cards {
+        flex-direction: row;
+    }
+}
+
+#main-0000001 figure {
+    display: flex;
+    flex-direction: column;
+}
+
+#main-0000001 .img-cards img {
+    height: 300px;
+    margin: auto;
+    width: 100%;
+    object-fit: cover;
+}
+
+#main-0000001 figcaption h2 {
+    font-size: clamp(1.5rem,
+            calc(var(--fs-h2) - 5vi),
+            var(--fs-h2));
+    margin-block: 2rem;
+}
+
+@media screen and (min-width: 600px) {
+    #main-0000001 figcaption h2 {
+        max-height: 4rem;
+    }
+}
+
+#main-0000001 .banner {
+    background-color: var(--yellow);
+    position: relative;
+}
+
+#main-0000001 h3 {
+    font-size: clamp(2.1rem,
+            calc(var(--fs-h3) - 8vi),
+            var(--fs-h3));
+    color: white;
+}
+
+#main-0000001 p {
+    font-size: clamp(1.1rem,
+            calc(var(--fs-p-banner) - 2vi),
+            var(--fs-p-banner));
+    margin-block: 2rem;
+}
+
+#main-0000001 #oko {
+    width: 100%;
+    object-fit: cover;
+}
+
+#main-0000001 .right {
+    padding: 4rem 3rem;
+    text-align: left;
+}
+
+#main-0000001 #mascara-overlay {
+    position: absolute;
+    max-height: 60vh;
+    top: -60px;
+    right: 10px;
+}
+
+#main-0000001 #vegan-sign {
+    width: 30%;
+    max-width: 90px;
+}
+
+@media screen and (min-width: 600px) {
+    #main-0000001 .banner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 450px;
+    }
+
+    #main-0000001 #mascara-overlay {
+        top: -50px;
+        left: calc(50vw - 90px);
+        height: 550px;
+    }
+
+    #main-0000001 #oko {
+        height: 450px;
+    }
+
+    #main-0000001 .right {
+        padding: 5rem 0 0 5rem;
+    }
+}
